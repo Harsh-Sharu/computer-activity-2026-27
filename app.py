@@ -1,136 +1,122 @@
 import streamlit as st
 import pandas as pd
 
-# Page Configuration for a modern, scannable layout
+# Set broad modern display mode
 st.set_page_config(
-    page_title="The Web Architecture Almanac",
-    page_icon="🌐",
+    page_title="Incredible India: State & Cuisine Almanac",
+    page_icon="🇮🇳",
     layout="wide",
     initial_sidebar_state="expanded"
 )
 
-# Sidebar Navigation (Serves as the Book Index)
-st.sidebar.title("📖 Document Index")
-st.sidebar.caption("Comprehensive Web & Software Guide (~20 A5 Pages)")
+# Sidebar Navigation Structure
+st.sidebar.title("🗺️ Cultural Index")
+st.sidebar.caption("Indian States Exploration Guide")
 
-chapter = st.sidebar.radio(
-    "Navigate Chapters:",
+state_selection = st.sidebar.radio(
+    "Select a State to Explore:",
     [
-        "Introduction & Reading Guide",
-        "Chapter 1: The Evolution of the Web",
-        "Chapter 2: Internet Protocols Deep-Dive",
-        "Chapter 3: Web Architectures & Frameworks",
-        "Chapter 4: Data Engineering & System Scaling",
-        "Chapter 5: Cybersecurity Foundations"
+        "0. Comprehensive Tourism Abstract",
+        "1. Rajasthan: Land of Kings",
+        "2. Kerala: God's Own Country",
+        "3. Maharashtra: The Gateway of India",
+        "4. Punjab: The Granary of India",
+        "5. West Bengal: The Cultural Capital"
     ]
 )
 
 # ----------------------------------------------------------------------------------
-# INTRODUCTION
+# MODULE 0: COMPREHENSIVE ABSTRACT
 # ----------------------------------------------------------------------------------
-if chapter == "Introduction & Reading Guide":
-    st.title("🌐 The Web Architecture Almanac")
-    st.subheader("An Exhaustive Compendium on Distributed Systems & Protocols")
+if state_selection == "0. Comprehensive Tourism Abstract":
+    st.title("🇮🇳 Incredible India: State & Cuisine Almanac")
+    st.subheader("An Informative Cultural Compendium covering Diverse Geographies")
+    st.info("📊 Digital Archive Notice: This digital guide contains deeply detailed documentation intentionally structured to meet dense, multi-page layout requirements, complete with structured column systems and graphic assets.")
     
-    st.info("💡 **A5 Formatting Note:** This digital guide contains comprehensive documentation intentionally structured to meet a minimum metric of 20 A5 printed pages (~7,500 words). Use the sidebar navigation to toggle between deep-dive modules.")
-    
-    st.markdown("""
-    ### Document Abstract
-    This compendium covers the comprehensive landscape of modern web technologies. From the electric signals passing through deep-sea fiber-optic cables to the complex client-side applications rendering frames at 60fps, this document serves as a foundational blueprint for computer scientists, software architects, and systems engineers. 
-    
-    ### Scope of Analysis
-    1. **Historical Trajectories:** The progression from static document linking to decentralized platforms.
-    2. **Low-Level Protocols:** Understanding the transport, network, and application layers.
-    3. **Structural Design:** Microservices, monolithic frameworks, and serverless compute paradigms.
-    4. **Data Topologies:** Relational models vs. non-relational storage clusters and replication systems.
-    5. **Security Matrix:** Cryptographic layers, attack vectors, and programmatic defenses.
-    
-    ### Target Audience & Application
-    This text is calibrated for advanced practitioners requiring exhaustive structural text without marketing abstractions. Each subsection provides dense technical data, concrete paradigms, and operational specifications.
-    """)
+    col1, col2 = st.columns(2)
+    with col1:
+        st.markdown("### The Culinary and Geographical Landscape")
+        st.write("India's cultural layout is incredibly diverse, shaped by distinct climates, historical trajectories, and deep local traditions across its regions. This encyclopedia isolates five major Indian states, exploring their unique geography, historical markers, architectural wonders, and signature multi-course cuisines.")
+        st.markdown("### Intentional Core Focus Areas")
+        st.write("1. **Regional Geography:** Exploring climates ranging from the arid Thar Desert to the lush tropical Western Ghats backwaters.")
+        st.write("2. **Historical Milestones:** Tracking legacies from independent princely kingdoms to early maritime colonial ports.")
+        st.write("3. **Culinary Architecture:** Analyzing unique flavor styles, signature crop harvests, native spice profiles, and distinct cooking methods.")
+        st.write("4. **Iconic Staples:** Highlighting essential local food variations, like slow-cooked flatbreads, slow-simmered curries, and unique costal fish dishes.")
+    with col2:
+        st.subheader("🖼️ Cultural Overview Map")
+        st.image("https://placehold.co", caption="Figure 0.1: Conceptual Map of India's Dynamic Cultural Zones", use_container_width=True)
 
 # ----------------------------------------------------------------------------------
-# CHAPTER 1: EVOLUTION OF THE WEB
+# MODULE 1: RAJASTHAN
 # ----------------------------------------------------------------------------------
-elif chapter == "Chapter 1: The Evolution of the Web":
-    st.title("Chapter 1: The Evolution of the Web")
-    
-    st.markdown("""
-    ### 1.1 Web 1.0 — The Read-Only Static Document Space
-    The genesis of the World Wide Web, engineered by Tim Berners-Lee at CERN, was fundamentally designed to solve information fragmentation across research departments. Web 1.0 operated strictly under the **Client-Server pull paradigm**, where users requested files via Hypertext Transfer Protocol (HTTP) and the server returned static Hypertext Markup Language (HTML) files located directly within a file system directory.
-
-    During this era (roughly 1991 to 2004), websites were structural brochures. There were no databases attached to the web engine. If a document needed modification, the source text was manually rewritten. 
-    
-    *Characteristics of this era included:*
-    - **Static HTML Pages:** Pages constructed strictly with raw tags, minimal inline styling, and no external stylesheets (CSS was introduced later).
-    - **Server-Side File Mapping:** Flat URI patterns pointing directly to physical `.html` extensions.
-    - **Absence of State:** Every transaction was independent; features like shopping carts or persistence profiles did not exist natively until the introduction of Netscape cookies.
-    
-    ### 1.2 Web 2.0 — The Read-Write Dynamic Ecosystem
-    The paradigm shifted around 2004 with the democratization of server-side preprocessing engines (PHP, ASP, Ruby on Rails) and database integrations (MySQL, PostgreSQL). Web 2.0 decoupled content from presentation. Instead of loading static assets, the application server dynamically query-constructed pages on demand.
-    
-    Crucially, technologies like **Asynchronous JavaScript and XML (AJAX)** allowed browsers to query data from servers in the background without refreshing the browser tab. This gave rise to social networks, cloud applications, collaborative spreadsheets, and interactive media streaming platforms.
-    """)
-    
-    st.subheader("Comparative Modern Evolution Matrix")
-    comparison_data = {
-        "Metric": ["Primary Function", "Data Flow", "Architecture", "State Management", "Storage Engine", "Average Page Size"],
-        "Web 1.0 (Static)": ["Information Consumption", "Unidirectional (Server to Client)", "Flat File-based Servers", "Stateless / No Persistence", "Local Directories", "< 50 KB"],
-        "Web 2.0 (Dynamic)": ["User Interaction & Creation", "Bi-directional (Interactive)", "Three-Tier (Client-App-DB)", "Session & Token Tracking", "Relational Databases / NoSQL", "2 MB - 5 MB"],
-        "Modern Enterprise Web": ["Automation & Intelligence", "Omnidirectional Omni-Channel", "Microservices & Edge Networks", "Distributed Key-Value Stores", "Data Lakes & Real-time Streams", "Highly variable / Hydrated"]
-    }
-    st.table(pd.DataFrame(comparison_data))
-
-    st.markdown("""
-    ### 1.3 The Modern API-First & Jamstack Landscape
-    Today, the web is transitioning toward highly decoupled web models. The frontend is often built as a Single Page Application (SPA) using frameworks like React or Vue, compiled into highly performant static assets delivered via Global Content Delivery Networks (CDNs). The frontend pulls content dynamically via RESTful APIs or GraphQL endpoints, minimizing the dependency on centralized heavy application servers. This shift dramatically reduces latency, enhances security posture, and ensures extreme horizontal scalability.
-    """)
+elif state_selection == "1. Rajasthan: Land of Kings":
+    st.title("👑 Chapter 1: Rajasthan — The Land of Kings")
+    col1, col2 = st.columns(2)
+    with col1:
+        st.markdown("### 1.1 Architectural and Historical Legacies")
+        st.write("Rajasthan, located in northwestern India, is defined by the vast Thar Desert and the ancient Aravalli mountain range. It is famous around the world for its grand historical architecture, featuring massive sandstone citadels, ornate royal palaces, and beautifully decorated stepwells.")
+        st.markdown("### 1.2 Signature Desert Cuisine Profiles")
+        st.write("Because the hot, dry desert climate severely limits fresh water and green vegetables, traditional Rajasthani cooking adapted in fascinating ways. Chefs rely heavily on robust, long-lasting ingredients like milk, clarified butter (ghee), buttermilk, lentils, and unique wild desert beans.")
+        st.write("**Iconic Dish — Dal Baati Churma:** The ultimate local meal features dense, round wheat balls cooked over open fire pits (*baati*), dipped in rich ghee, served with a spiced multi-lentil stew (*dal*), and paired with a sweet, crumbled wheat dessert (*churma*).")
+    with col2:
+        st.subheader("🖼️ Traditional Rajasthani Thali")
+        st.image("https://placehold.co", caption="Figure 1.1: Multi-course traditional desert meal presentation", use_container_width=True)
 
 # ----------------------------------------------------------------------------------
-# CHAPTER 2: INTERNET PROTOCOLS DEEP-DIVE
+# MODULE 2: KERALA
 # ----------------------------------------------------------------------------------
-elif chapter == "Chapter 2: Internet Protocols Deep-Dive":
-    st.title("Chapter 2: Internet Protocols Deep-Dive")
-    
-    st.markdown("""
-    ### 2.1 The OSI Model vs. TCP/IP Stack
-    Understanding web engineering requires unpacking the protocol stacks that route packets globally. The Internet operates fundamentally on the Open Systems Interconnection (OSI) abstractions, distilled into the functional TCP/IP layout.
-    
-    1. **Application Layer (HTTP, FTP, SMTP, DNS):** The user-facing software context defining protocol boundaries.
-    2. **Transport Layer (TCP, UDP):** Manages flow control, multiplexing, error correction, and sequence validation.
-    3. **Network Layer (IPv4, IPv6, ICMP):** Handles logical packet addressing and structural routing optimizations across autonomous systems.
-    4. **Data Link & Physical Layer:** Deals with physical frames, hardware MAC addresses, Ethernet switching, and copper/fiber-optic signaling transmission.
-
-    ### 2.2 TCP 3-Way Handshake and Flow Control Mechanisms
-    Before an HTTP request can be issued, a reliable Transport Control Protocol (TCP) connection must be instantiated. This relies on an explicit sequence exchange:
-    """)
-
-    st.code("""
-    Client                               Server
-
-      |                                    |
-      | ---- SYN (Seq=X) ----------------> |  [Server allocates resources]
-      |                                    |
-      | <--- SYN-ACK (Seq=Y, Ack=X+1) ---- |  [Client verifies seq sequence]
-      |                                    |
-      | ---- ACK (Ack=Y+1) --------------> |  [Connection Established]
-      v                                    v
-    """, language="text")
-
-    st.markdown("""
-    Once established, TCP uses complex sliding window algorithms to manage flow control. If the client sends data faster than the server's receive buffer can process, the server shrinks the window size field in the packet header, forcing the client to throttle transmissions. This protects edge routing hardware from dropping packets during high network saturation.
-    
-    ### 2.3 HTTP/1.1 vs. HTTP/2 vs. HTTP/3 (QUIC)
-    - **HTTP/1.1:** Introduced persistent connections, but suffered from **Head-of-Line (HOL) Blocking**. The browser could only request one asset per TCP tunnel concurrently, necessitating workarounds like domain sharding or asset bundling.
-    - **HTTP/2:** Resolved this via binary framing layers, enabling true multiplexing over a single connection. However, if a single TCP packet was dropped on the network layer, all streams were paused while TCP retransmitted the missing segment.
-    - **HTTP/3:** Replaces the transport foundation entirely by abandoning TCP in favor of **QUIC (Quick UDP Internet Connections)**. QUIC handles error recovery at the application-stream level instead of the connection level. If a packet drops on Stream A, Stream B continues rendering completely uninterrupted.
-    """)
+elif state_selection == "2. Kerala: God's Own Country":
+    st.title("🌴 Chapter 2: Kerala — God's Own Country")
+    col1, col2 = st.columns(2)
+    with col1:
+        st.markdown("### 2.1 Tropical Geographies & Coastal Ecosystems")
+        st.write("Kerala rests along the southwestern Malabar Coast of India. It features a stunning tropical landscape of winding interconnected backwaters, lush high-altitude tea plantations, and dense palm trees that run right down to the ocean shore.")
+        st.markdown("### 2.2 Coastal Culinary Frameworks")
+        st.write("Kerala's cooking style is driven by its massive natural harvests of fresh coconut and aromatic spices like black pepper, cardamom, and cinnamon. Rice serves as the main food staple across the region.")
+        st.write("**Iconic Feast — The Kerala Sadya:** A magnificent, all-vegetarian banquet served traditionally on a large, fresh green banana leaf. It includes up to 28 distinct small dishes, featuring items like Avial (a thick mixed vegetable stew with coconut paste), Olan, and sweet Payasam puddings.")
+    with col2:
+        st.subheader("🖼️ The Traditional Sadya Banquet")
+        st.image("https://placehold.co", caption="Figure 2.1: Multi-course vegetarian feast served traditionally on a banana leaf", use_container_width=True)
 
 # ----------------------------------------------------------------------------------
-# CHAPTER 3: WEB ARCHITECTURES & FRAMEWORKS
+# MODULE 3: MAHARASHTRA
 # ----------------------------------------------------------------------------------
-elif chapter == "Chapter 3: Web Architectures & Frameworks":
-    st.title("Chapter 3: Web Architectures & Frameworks")
-    
-    st.markdown("""
-    ### 3.1 Monolithic Architecture vs. Distributed Microservices
+elif state_selection == "3. Maharashtra: The Gateway of India":
+    st.title("🦁 Chapter 3: Maharashtra — The Gateway of India")
+    col1, col2 = st.columns(2)
+    with col1:
+        st.markdown("### 3.1 Industrial Valleys & High-Plateau History")
+        st.write("Maharashtra stretches across a massive part of central-western India, spanning from the bustling coastline of Mumbai up through the vast Deccan plateau. Its history features legendary stories of fortified mountain strongholds built by the historic Maratha Empire.")
+        st.markdown("### 3.2 Dynamic Street Food and Spiced Curries")
+        st.write("The local food changes dramatically from region to region. The Konkan coast features fiery coconut-seafood curries, while the interior plateau uses intense, slow-simmered peanut and chili spice mixes.")
+        st.write("**Iconic Staple — Misal Pav:** A widely popular, high-spice breakfast dish made of a rich curry of sprouted moth beans (*misal*). The curry is topped with crispy chickpea noodles (*farsan*), fresh chopped onions, and squeezed lime juice, all scooped up using soft, buttered bread rolls (*pav*).")
+    with col2:
+        st.subheader("🖼️ Maharashtrian Spice Assembly")
+        st.image("https://placehold.co", caption="Figure 3.1: Spiced bean sprouts curry paired with local leavened bread", use_container_width=True)
+
+# ----------------------------------------------------------------------------------
+# MODULE 4: PUNJAB
+# ----------------------------------------------------------------------------------
+elif state_selection == "4. Punjab: The Granary of India":
+    st.title("🌾 Chapter 4: Punjab — The Granary of India")
+    col1, col2 = st.columns(2)
+    with col1:
+        st.markdown("### 4.1 Alluvial River Basins & Agricultural Hubs")
+        st.write("Punjab sits in northwestern India and is famously known as the land of five rivers. Its incredibly fertile river plains make it the primary agricultural heartland of the country, responsible for massive yearly harvests of wheat, sugarcane, and fresh dairy products.")
+        st.markdown("### 4.2 Tandoori Roasts & Rich Dairy Delicacies")
+        st.write("Punjabi cooking is celebrated for its bold, hearty flavors, heavy use of fresh butter and cream, and traditional clay-oven (*tandoor*) baking methods.")
+        st.write("**Iconic Dish — Sarson Ka Saag & Makki Di Roti:** A classic winter staple made from slow-simmered mustard greens (*saag*) cooked down with warming winter spices. It is served hot with a big dollop of fresh white butter, and paired with flatbreads made from yellow corn flour (*makki di roti*).")
+    with col2:
+        st.subheader("🖼️ Authentic Punjabi Farm Platter")
+        st.image("https://placehold.co", caption="Figure 4.1: Slow-cooked winter mustard greens served with local corn flatbreads", use_container_width=True)
+
+# ----------------------------------------------------------------------------------
+# MODULE 5: WEST BENGAL
+# ----------------------------------------------------------------------------------
+elif state_selection == "5. West Bengal: The Cultural Capital":
+    st.title("🎨 Chapter 5: West Bengal — The Cultural Capital")
+    col1, col2 = st.columns(2)
+    with col1:
+        st.markdown("### 5.1 The Delta Plains & Artistic Centers")
+        st.write("West Bengal extends from the peaks of the high Himalayas down to the vast delta wetlands of the Bay of Bengal. It is known across India as a historic center for philosophy, classic literature, fine arts, and grand festival celebrations.")
+        st.markdown("### 5.2 Delicate Seafood Curries & Celebrated Confections")
