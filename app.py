@@ -37,17 +37,14 @@ if state_selection == "0. Comprehensive Tourism Abstract":
     tab1, tab2 = st.tabs(["🏛️ Overview Hub", "📊 System Analytics"])
     
     with tab1:
-        col1, col2 = st.columns(2)
-        with col1:
-            st.markdown("### The Culinary and Geographical Landscape")
-            st.write("India's cultural layout is incredibly diverse, shaped by distinct climates, historical trajectories, and deep local traditions across its regions. This encyclopedia isolates five major Indian states, exploring their unique geography, historical markers, architectural wonders, and signature multi-course cuisines.")
-            st.markdown("### Intentional Core Focus Areas")
-            st.write("1. **Regional Geography:** Exploring climates ranging from the arid Thar Desert to the lush tropical Western Ghats backwaters.")
-            st.write("2. **Historical Milestones:** Tracking legacies from independent princely kingdoms to early maritime colonial ports.")
-            st.write("3. **Culinary Architecture:** Analyzing unique flavor styles, signature crop harvests, native spice profiles, and distinct cooking methods.")
-        with col2:
-            st.subheader("🖼️ Cultural Overview Map")
-            st.image("https://unsplash.com", caption="Figure 0.1: Iconic Monuments of India Heritage", use_container_width=True)
+        st.markdown("### The Culinary and Geographical Landscape")
+        st.write("India's cultural layout is incredibly diverse, shaped by distinct climates, historical trajectories, and deep local traditions across its regions. This encyclopedia isolates five major Indian states, exploring their unique geography, historical markers, architectural wonders, and signature multi-course cuisines.")
+        st.markdown("### Intentional Core Focus Areas")
+        st.write("1. **Regional Geography:** Exploring climates ranging from the arid Thar Desert to the lush tropical Western Ghats backwaters.")
+        st.write("2. **Historical Milestones:** Tracking legacies from independent princely kingdoms to early maritime colonial ports.")
+        st.write("3. **Culinary Architecture:** Analyzing unique flavor styles, signature crop harvests, native spice profiles, and distinct cooking methods.")
+        st.subheader("🖼️ Cultural Overview Map")
+        st.image("https://unsplash.com", caption="Figure 0.1: Iconic Monuments of India Heritage", use_container_width=True)
 
     with tab2:
         st.markdown("### Core Regional Specifications")
@@ -75,14 +72,11 @@ elif state_selection == "1. Rajasthan: Land of Kings":
         st.write("The capital city, Jaipur (The Pink City), alongside Jodhpur (The Blue City) and Udaipur (The City of Lakes), forms the golden triangle of heritage infrastructure that defined medieval princely rule.")
 
     with tab2:
-        col1, col2 = st.columns(2)
-        with col1:
-            st.markdown("### 1.2 Signature Desert Cuisine Profiles")
-            st.write("Because the hot, dry desert climate severely limits fresh water and green vegetables, traditional Rajasthani cooking adapted in fascinating ways. Chefs rely heavily on robust, long-lasting ingredients like milk, clarified butter (ghee), buttermilk, lentils, and unique wild desert beans.")
-            st.write("**Iconic Dish — Dal Baati Churma:** The ultimate local meal features dense, round wheat balls cooked over open fire pits (*baati*), dipped in rich ghee, served with a spiced multi-lentil stew (*dal*), and paired with a sweet, crumbled wheat dessert (*churma*).")
-        with col2:
-            st.subheader("🖼️ Traditional Rajasthani Heritage")
-            st.image("https://unsplash.com", caption="Figure 1.1: Majestic Palaces of Rajasthan", use_container_width=True)
+        st.markdown("### 1.2 Signature Desert Cuisine Profiles")
+        st.write("Because the hot, dry desert climate severely limits fresh water and green vegetables, traditional Rajasthani cooking adapted in fascinating ways. Chefs rely heavily on robust, long-lasting ingredients like milk, clarified butter (ghee), buttermilk, lentils, and unique wild desert beans.")
+        st.write("**Iconic Dish — Dal Baati Churma:** The ultimate local meal features dense, round wheat balls cooked over open fire pits (*baati*), dipped in rich ghee, served with a spiced multi-lentil stew (*dal*), and paired with a sweet, crumbled wheat dessert (*churma*).")
+        st.subheader("🖼️ Traditional Rajasthani Heritage")
+        st.image("https://unsplash.com", caption="Figure 1.1: Majestic Palaces of Rajasthan", use_container_width=True)
 
 # ----------------------------------------------------------------------------------
 # MODULE 2: KERALA
@@ -98,14 +92,11 @@ elif state_selection == "2. Kerala: God's Own Country":
         st.write("Its unique marine geography enabled historical spice trade partnerships with ancient Rome, Greece, and Middle Eastern empires.")
 
     with tab2:
-        col1, col2 = st.columns(2)
-        with col1:
-            st.markdown("### 2.2 Coastal Culinary Frameworks")
-            st.write("Kerala's cooking style is driven by its massive natural harvests of fresh coconut and aromatic spices like black pepper, cardamom, and cinnamon. Rice serves as the main food staple across the region.")
-            st.write("**Iconic Feast — The Kerala Sadya:** A magnificent, all-vegetarian banquet served traditionally on a large, fresh green banana leaf. It includes up to 28 distinct small dishes, featuring items like *Avial* (a thick mixed vegetable stew with coconut paste), *Olan*, and sweet *Payasam* puddings.")
-        with col2:
-            st.subheader("🖼️ Tropical Kerala Backwaters")
-            st.image("https://unsplash.com", caption="Figure 2.1: Serene Coastal Ecosystems of Kerala", use_container_width=True)
+        st.markdown("### 2.2 Coastal Culinary Frameworks")
+        st.write("Kerala's cooking style is driven by its massive natural harvests of fresh coconut and aromatic spices like black pepper, cardamom, and cinnamon. Rice serves as the main food staple across the region.")
+        st.write("**Iconic Feast — The Kerala Sadya:** A magnificent, all-vegetarian banquet served traditionally on a large, fresh green banana leaf. It includes up to 28 distinct small dishes, featuring items like *Avial* (a thick mixed vegetable stew with coconut paste), *Olan*, and sweet *Payasam* puddings.")
+        st.subheader("🖼️ Tropical Kerala Backwaters")
+        st.image("https://unsplash.com", caption="Figure 2.1: Serene Coastal Ecosystems of Kerala", use_container_width=True)
 
 # ----------------------------------------------------------------------------------
 # MODULE 3: MAHARASHTRA
@@ -120,14 +111,11 @@ elif state_selection == "3. Maharashtra: The Gateway of India":
         st.write("Maharashtra stretches across a massive part of central-western India, spanning from the bustling coastline of Mumbai up through the vast Deccan plateau. Its history features legendary stories of fortified mountain strongholds built by the historic Maratha Empire.")
 
     with tab2:
-        col1, col2 = st.columns(2)
-        with col1:
-            st.markdown("### 3.2 Dynamic Street Food and Spiced Curries")
-            st.write("The local food changes dramatically from region to region. The Konkan coast features fiery coconut-seafood curries, while the interior plateau uses intense, slow-simmered peanut and chili spice mixes.")
-            st.write("**Iconic Staple — Misal Pav:** A widely popular, high-spice breakfast dish made of a rich curry of sprouted moth beans (*misal*). The curry is topped with crispy chickpea noodles (*farsan*), fresh chopped onions, and squeezed lime juice, all scooped up using soft, buttered bread rolls (*pav*).")
-        with col2:
-            st.subheader("🖼️ Gateway Architecture")
-            st.image("https://unsplash.com", caption="Figure 3.1: Mumbai Coastline Infrastructure", use_container_width=True)
+        st.markdown("### 3.2 Dynamic Street Food and Spiced Curries")
+        st.write("The local food changes dramatically from region to region. The Konkan coast features fiery coconut-seafood curries, while the interior plateau uses intense, slow-simmered peanut and chili spice mixes.")
+        st.write("**Iconic Staple — Misal Pav:** A widely popular, high-spice breakfast dish made of a rich curry of sprouted moth beans (*misal*). The curry is topped with crispy chickpea noodles (*farsan*), fresh chopped onions, and squeezed lime juice, all scooped up using soft, buttered bread rolls (*pav*).")
+        st.subheader("🖼️ Gateway Architecture")
+        st.image("https://unsplash.com", caption="Figure 3.1: Mumbai Coastline Infrastructure", use_container_width=True)
 
 # ----------------------------------------------------------------------------------
 # MODULE 4: PUNJAB
@@ -142,5 +130,5 @@ elif state_selection == "4. Punjab: The Granary of India":
         st.write("Punjab sits in northwestern India and is famously known as the land of five rivers. Its incredibly fertile river plains make it the primary agricultural heartland of the country, responsible for massive yearly harvests of wheat, sugarcane, and fresh dairy products.")
 
     with tab2:
-        col1, col2 = st.columns(2)
-        with col1:
+        st.markdown("### 4.2 Tandoori Roasts & Rich Dairy Delicacies")
+        st.write("Punjabi cooking is celebrated for its bold, hearty flavors, heavy use of fresh butter and cream, and traditional clay-oven (*tandoor*) baking methods.")
