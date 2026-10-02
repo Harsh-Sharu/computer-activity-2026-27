@@ -174,3 +174,18 @@ elif state_selection == "4. Punjab: The Granary of India":
     
     t1.markdown("### 4.1 Alluvial River Basins & Agricultural Hubs")
     t1.write("Punjab sits in northwestern India and is famously known as the land of five rivers. Its plains make it the primary agricultural heartland of the country.")
+    t1.image("unsplash.com", caption="Figure 4.1: The Golden Temple Complex of Amritsar", use_container_width=True)
+t2.markdown("### 4.2 Tandoori Roasts & Rich Dairy Delicacies")
+t2.write("Punjabi cooking is celebrated for its bold, hearty flavors, heavy use of fresh butter and cream, and traditional clay-oven (tandoor) baking methods.")
+t2.write("Iconic Dish — Sarson Ka Saag & Makki Di Roti: A classic winter staple made from slow-simmered mustard greens (saag) served hot with corn flatbreads.")
+t2.image("unsplash.com", caption="Figure 4.2: Robust Rich Spiced Curries and Crafted Flatbreads", use_container_width=True)
+elif state_selection == "5. West Bengal: The Cultural Capital":
+st.title("🎨 Chapter 5: West Bengal — The Cultural Capital")
+t1, t2 = st.tabs(["🎨 Literary & Art Foundations", "🐟 Sea Gastronomy & Images"])
+t1.markdown("### 5.1 The Delta Plains & Artistic Centers")
+t1.write("West Bengal extends from the peaks of the high Himalayas down to the vast delta wetlands. It is known across India as a historic center for philosophy, classic literature, and fine arts.")
+t1.image("unsplash.com", caption="Figure 5.1: Historical Architecture and Bridges of West Bengal", use_container_width=True)
+t2.markdown("### 5.2 Delicate Seafood Curries & Celebrated Confections")
+t2.write("Bengali food focuses heavily on the perfect pairing of freshwater fish and rice. Most dishes are cooked in pungent mustard oil and use the classic five-spice blend Panch Phoron.")
+t2.write("The region is also famous worldwide for its delicate milk-based sweets like Rasgulla, Sandesh, and Mishti Doi.")
+t2.image("unsplash.com", caption="Figure 5.2: Traditional Indian Gourmet Curry Combinations", use_container_width=True)
